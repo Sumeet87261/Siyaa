@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f9e9f4">
+<title>A Little World for Siyaaa ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+:root{--ink:#503d59;--muted:#8e7897;--pink:#f5cfe2;--rose:#e99fc5;--lilac:#d9c8f5;--cream:#fff9fc;--deep:#4e365d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:'DM Sans',sans-serif;background:linear-gradient(135deg,#fff7fb 0%,#f9efff 48%,#fff4f7 100%);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.26;background-image:radial-gradient(#dca8d0 1px,transparent 1px);background-size:28px 28px;z-index:-1}
+button,input{font:inherit}button{cursor:pointer}.serif{font-family:'Playfair Display',serif}.wrap{width:min(1100px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:20;background:#fff9f2d9;backdrop-filter:blur(16px);border-bottom:1px solid #efd9ea}
+.navinner{height:68px;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-family:'Playfair Display',serif;font-size:20px;color:#694b71}.brand span{color:#d77eae}
+.navlinks{display:flex;gap:18px;align-items:center}.navlinks a{color:#806c89;text-decoration:none;font-size:13px;font-weight:600}.navlinks a:hover{color:#c36b9c}
+.menu{display:none;border:0;background:none;font-size:24px;color:var(--ink)}
+.hero{min-height:690px;display:grid;place-items:center;text-align:center;padding:80px 0 90px;position:relative}
+.hero-card{max-width:760px;position:relative}.eyebrow{letter-spacing:3px;text-transform:uppercase;color:#b27da8;font-size:11px;font-weight:700}
+.hero h1{font:600 clamp(48px,8vw,86px)/1.03 'Playfair Display',serif;margin:22px 0 18px;color:#684c77}.hero h1 em{color:#d77eae;font-weight:500}
+.hero p{font-size:16px;line-height:1.8;color:#8d7895;max-width:540px;margin:0 auto 28px}
+.primary,.soft{border:0;border-radius:999px;padding:14px 23px;font-weight:700;box-shadow:0 10px 25px #d99cc344;transition:.2s}.primary{color:white;background:linear-gradient(110deg,#d783b2,#a98bd8)}.soft{background:#fff;color:#a36d9b;border:1px solid #f0d9e9}.primary:hover,.soft:hover{transform:translateY(-3px);box-shadow:0 14px 28px #d99cc355}
+.float{position:absolute;font-size:26px;animation:float 5s ease-in-out infinite;opacity:.8}.f1{left:7%;top:23%}.f2{right:8%;top:30%;animation-delay:1s}.f3{left:15%;bottom:18%;animation-delay:2s}.f4{right:14%;bottom:15%;animation-delay:.6s}
+@keyframes float{50%{transform:translateY(-17px) rotate(8deg)}}
+.section{padding:76px 0;scroll-margin-top:75px}.sectionhead{text-align:center;margin-bottom:34px}.sectionhead .eyebrow{margin-bottom:10px}.sectionhead h2{font:600 clamp(32px,5vw,48px) 'Playfair Display',serif;margin:0;color:#694d77}.sectionhead p{color:#927f98;line-height:1.7;max-width:600px;margin:12px auto 0}
+.panel{background:#ffffffc9;border:1px solid #f1ddeb;border-radius:28px;padding:26px;box-shadow:0 18px 50px #a77a9b12}
+.scrapbook{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.photo{min-height:245px;background:#fff;border-radius:14px;padding:12px 12px 42px;box-shadow:0 8px 24px #795c7617;transform:rotate(var(--rot));transition:.25s;position:relative}.photo:hover{transform:rotate(0) translateY(-5px)}.photo img{width:100%;height:190px;object-fit:cover;border-radius:8px;background:linear-gradient(135deg,#f8dce9,#e7dcfa)}.photo .placeholder{height:190px;border-radius:8px;background:linear-gradient(135deg,#f8dce9,#e7dcfa);display:grid;place-items:center;text-align:center;color:#a47da5;font:italic 19px 'Playfair Display',serif;padding:20px}.caption{position:absolute;bottom:12px;left:10px;right:10px;text-align:center;color:#856d88;font:italic 16px 'Playfair Display',serif}
+.uploadrow{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:22px}.uploadrow input{max-width:230px;color:#8c7893;font-size:13px}
+.reasons-layout{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.reason-note{background:linear-gradient(145deg,#fff5fa,#f5efff);border-radius:24px;padding:32px;text-align:center;min-height:285px;display:grid;place-items:center}.reason-note h3{font:italic 29px 'Playfair Display',serif;color:#9c6e9c;margin:0 0 12px}.reason-note p{color:#8e7b96;line-height:1.8;margin:0}.reason-number{font-size:12px;letter-spacing:2px;color:#bd83aa;text-transform:uppercase}.reason-text{font:italic 25px/1.5 'Playfair Display',serif;color:#694d77;max-width:400px}.reason-controls{display:flex;justify-content:center;gap:10px;margin-top:18px}
+.universe{border-radius:28px;min-height:380px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 120%,#986fae,#4d3a69 55%,#292443);color:white}
+.universe:before,.universe:after{content:"";position:absolute;inset:0;background-image:radial-gradient(#fff 1px,transparent 1.5px),radial-gradient(#f5d6ff 1px,transparent 1.5px);background-size:73px 73px,113px 113px;background-position:12px 20px,40px 5px;opacity:.5}
+.star{position:absolute;border:0;background:transparent;color:#ffe6a8;font-size:27px;text-shadow:0 0 14px #ffe6a8;transition:.2s;z-index:2;animation:twinkle 2s infinite alternate}.star:hover{transform:scale(1.5)}@keyframes twinkle{to{opacity:.55;transform:scale(.85)}}
+.universe-center{position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;width:80%;pointer-events:none}.universe-center h3{font:italic 32px 'Playfair Display',serif;margin:0 0 9px;color:#fff1fb}.universe-center p{font-size:13px;color:#e4d8f3}
+.star-message{margin-top:16px;min-height:24px;font:italic 17px 'Playfair Display',serif;color:#ffe4f3}
+.gift-area{display:grid;place-items:center;text-align:center;padding:20px}.gift{width:150px;height:125px;position:relative;margin:12px auto 24px;transition:.3s;filter:drop-shadow(0 15px 18px #ba7eb544)}.gift:hover{transform:translateY(-7px) rotate(-2deg)}.giftbox{position:absolute;bottom:0;width:150px;height:92px;background:linear-gradient(120deg,#df91bb,#c77ab2);border-radius:8px}.giftlid{position:absolute;top:15px;left:-8px;width:166px;height:30px;background:linear-gradient(120deg,#f2b7d5,#d78dbd);border-radius:7px;transform-origin:left bottom;transition:.7s}.ribbon{position:absolute;left:64px;bottom:0;width:22px;height:92px;background:#fff0f7}.bow{position:absolute;top:0;left:53px;font-size:49px;color:#fff0f7;z-index:2}.gift.open .giftlid{transform:translateY(-65px) rotate(-22deg)}.gift.open{animation:pop .5s}@keyframes pop{50%{transform:scale(1.08)}}
+.letter{display:none;max-width:620px;margin:24px auto 0;background:#fff9fd;border:1px solid #f0d8e8;border-radius:20px;padding:28px;text-align:left;box-shadow:0 15px 40px #6b456b18}.letter.show{display:block;animation:appear .6s}@keyframes appear{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}.letter h3{font:italic 27px 'Playfair Display',serif;color:#a36e9a;margin:0 0 14px}.letter p{line-height:1.9;color:#816e89;font-size:14px}
+footer{text-align:center;padding:35px 15px 45px;color:#a48da8;font-size:12px}footer .heart{color:#d77eae;font-size:18px}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#60486d;color:white;padding:11px 18px;border-radius:999px;font-size:13px;opacity:0;pointer-events:none;transition:.3s;z-index:50}.toast.show{opacity:1}
+@media(max-width:700px){.navlinks{display:none;position:absolute;top:68px;left:0;right:0;background:#fff9f2;padding:18px;flex-direction:column;border-bottom:1px solid #efd9ea}.navlinks.show{display:flex}.menu{display:block}.hero{min-height:600px;padding:65px 0}.f1{left:2%}.f2{right:3%}.scrapbook{grid-template-columns:repeat(2,1fr);gap:12px}.photo{min-height:190px;padding:8px 8px 36px}.photo img,.photo .placeholder{height:145px}.caption{font-size:14px}.reasons-layout{grid-template-columns:1fr}.panel{padding:16px}.section{padding:58px 0}.universe{min-height:350px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap navinner"><div class="brand">a little world <span>♡</span></div><button class="menu" id="menuBtn" aria-label="Open menu">☰</button><div class="navlinks" id="navlinks"><a href="#scrapbook">Scrapbook</a><a href="#reasons">100 little things</a><a href="#universe">Our universe</a><a href="#gift">A surprise</a></div></div></nav>
+<header class="hero">
+  <span class="float f1">♡</span><span class="float f2">✿</span><span class="float f3">✧</span><span class="float f4">♡</span>
+  <div class="hero-card wrap"><div class="eyebrow">A tiny corner of the internet, made just for you</div><h1 class="serif">Hey, <em>Siyaaa</em> ♡</h1><p>Not a birthday. Not an occasion. Just a little reminder that someone thinks you're pretty wonderful — adorable, beautiful, cute, and perfectly you.</p><button class="primary" onclick="document.querySelector('#scrapbook').scrollIntoView({behavior:'smooth'})">Step into your little world&nbsp; ↓</button></div>
+</header>
+<main>
+<section class="section wrap" id="scrapbook"><div class="sectionhead"><div class="eyebrow">chapter one · little moments</div><h2 class="serif">Our Little Scrapbook</h2><p>A place for the moments worth keeping. Add your favourite photos whenever you're ready — each one can hold a tiny memory.</p></div>
+<div class="photo" style="--rot:-2deg">
+  <img src="images/photo1.jpg" alt="Our memory">
+  <div class="caption">A favourite moment ♡</div>
+</div>
+
+<div class="photo" style="--rot:2deg">
+  <img src="images/photo2.jpeg" alt="A special memory">
+  <div class="caption">Your beautiful smile</div>
+</div>
+
+<div class="photo" style="--rot:-1deg">
+  <img src="images/photo3.png" alt="A lovely memory">
+  <div class="caption">A little sunshine</div>
+</div>
+</section>
+<section class="section wrap" id="reasons"><div class="sectionhead"><div class="eyebrow">chapter two · just because</div><h2 class="serif">100 Little Things I Adore About You</h2><p>One click, one little reminder. The best reasons are the ones that feel true.</p></div>
+<div class="reasons-layout"><div class="reason-note"><div><div class="reason-number" id="reasonCount">little thing 01 / 100</div><div class="reason-text" id="reasonText">The way your smile can make an ordinary day feel a little brighter.</div><div class="reason-controls"><button class="soft" id="prevReason">←</button><button class="primary" id="nextReason">Another one ♡</button></div></div></div><div class="panel"><h3 class="serif" style="font-size:27px;color:#9c6e9c;margin:4px 0 12px">A small reminder</h3><p style="line-height:1.9;color:#8e7b96">You don't have to do anything extraordinary to be appreciated. The little things — your laugh, your kindness, your way of seeing the world — are already lovely.</p><p style="line-height:1.9;color:#8e7b96">Some of these reasons are little prompts for you to personalise. Swap in the details only you would know about Siyaaa.</p><div style="font-size:24px;color:#d88ab7">♡ ✧ ♡</div></div></div>
+</section>
+<section class="section wrap" id="universe"><div class="sectionhead"><div class="eyebrow">chapter three · somewhere among the stars</div><h2 class="serif">My Favourite Universe</h2><p>Tap a star. Each one is hiding a little message for you.</p></div><div class="universe" id="sky"><div class="universe-center"><h3>For you, Siyaaa</h3><p>There are lovely little things everywhere. Find one.</p><div class="star-message" id="starMessage">✧ Pick a glowing star ✧</div></div></div></section>
+<section class="section wrap" id="gift"><div class="sectionhead"><div class="eyebrow">chapter four · one last thing</div><h2 class="serif">A Little Gift For You</h2><p>Go on. It's been waiting for you.</p></div><div class="panel gift-area"><div class="gift" id="giftBox"><div class="bow">♡</div><div class="giftlid"></div><div class="giftbox"></div><div class="ribbon"></div></div><button class="primary" id="openGift">Open your little surprise 🎀</button><article class="letter" id="letter"><h3>Dear Siyaaa,</h3><p>I made this little place just for you. There's no special reason and no big occasion. I just wanted to give you something that might make you smile.</p><p>I hope you never forget how lovely you are — adorable in the little things, beautiful in your own way, cute without even trying, and perfectly yourself. You deserve kindness, happy moments, and all the little things that make your heart feel light.</p><p>Thank you for being you. I hope this tiny corner of the internet makes your day a little sweeter.</p><p class="serif" style="font-size:20px;color:#a36e9a">With a little extra care, ♡</p><p style="font-size:11px;color:#b49db4">P.S. You can come back here whenever you need a smile.</p></article></div></section>
+</main>
+<footer>Made with a little extra care for Siyaaa <div class="heart">♡</div></footer>
+<div class="toast" id="toast"></div>
+<script>
+const reasons=[
+"The way your smile can make an ordinary day feel brighter.","Your adorable little ways, even when you don't notice them.","How beautiful you are.","The way you make conversations feel easy.","Your laugh — it deserves its own little soundtrack.","How you can make a simple moment feel special.","The little details that make you completely you.","Your kindness, even in the smallest moments.","The way your presence can make a day feel softer.","Because being yourself is already more than enough.",
+"Your cute expressions.","The way you make me curious to know more about you.","How one message from you can make me smile.","Your lovely energy.","The way you see things differently.","Your thoughtful side.","The little stories you share.","Your confidence when you talk about something you love.","How you make ordinary words feel memorable.","The warmth you bring without even trying.",
+"Your smile when something genuinely makes you happy.","The way you get excited about little things.","Your sense of humour.","The fact that there's always something new to learn about you.","Your patience.","Your soft heart.","Your unique way of saying things.","The way you make people feel seen.","Your beautiful little imperfections.","Simply the fact that you're you.",
+"Your curiosity about the world.","The way you can turn a boring chat into a fun one.","Your honesty.","The little things you remember.","Your voice and the way you speak.","Your determination.","Your gentle side.","Your playful side.","The way you make me look forward to the next conversation.","Your individuality.",
+"How effortlessly cute you can be.","The way your eyes light up when you're happy.","Your ability to make me laugh.","The little surprises in your personality.","Your creativity.","The way you care about the people around you.","Your dreams and ambitions.","The things you're passionate about.","Your calm moments.","Your happy chaos.",
+"Because you don't need to pretend to be anyone else.","Your natural beauty.","The way you brighten a room just by being in it.","Your little reactions.","Your sweet messages.","The way you make time feel faster when we talk.","Your strength, even on difficult days.","Your thoughtful questions.","The way you notice tiny details.","The fact that you're one of a kind.",
+"Your sense of wonder.","Your courage to be yourself.","The way you make me want to be more thoughtful.","Your lovely personality.","The little things that make you laugh.","Your warmth.","Your ability to make memories out of simple moments.","The way you express yourself.","Your kindness to others.","Your beautiful mind.",
+"Your adorable random moments.","The way you make a simple hello feel nice.","The way you healed me by just being a part of my life, now whole world","Your lovely sense of style.","Your resilience.","Your gentle honesty.","The way you bring your own colour to every day.","Your little victories.","Your anger feels cute","Your realness.",
+"Because you deserve to be appreciated just as you are.","The way you can be both strong and soft.","Your unexpected jokes.","Your thoughtful gestures.","Your lovely perspective.","The way you make the world feel a little less ordinary.","The little things that make you different.","Your smile in my imagination when I think of you.","The possibility of more memories still to come.","Because there's always another reason to appreciate you.",
+"And one more: you don't have to be perfect to be wonderful.","And another: you're already someone worth celebrating.","And the simplest one of all — I'm glad I got to know you.","And this one is just for your smile.","Because you make being thoughtful feel easy.","Because your story is still unfolding.","Because there are so many little things left to discover.","Because you deserve good things, today and always.","Because this page exists just to remind you.","Because, Siyaaa, you're wonderfully you."
+];
+let reasonIndex=0; 
+function showReason(){document.getElementById('reasonText').textContent=reasons[reasonIndex];document.getElementById('reasonCount').textContent=`little thing ${String(reasonIndex+1).padStart(2,'0')} / 100`}
+document.getElementById('nextReason').onclick=()=>{reasonIndex=(reasonIndex+1)%100;showReason()};
+document.getElementById('prevReason').onclick=()=>{reasonIndex=(reasonIndex+99)%100;showReason()};
+const messages=["Your smile is a tiny kind of magic. ♡","You make ordinary moments feel special.","Never forget how much loveliness you bring into the world.","You deserve a day as lovely as you are.","Keep being your adorable, and being mine.","A little star reminder: you're appreciated.","I hope something makes you smile today.","The world is a little brighter with you in it."];
+const sky=document.getElementById('sky');
+for(let i=0;i<18;i++){let b=document.createElement('button');b.className='star';b.textContent=i%3===0?'✦':'✧';b.setAttribute('aria-label','Reveal a star message');b.style.left=(7+(i*37)%86)+'%';b.style.top=(9+(i*53)%78)+'%';b.style.animationDelay=(i%5)*.3+'s';b.onclick=()=>{document.getElementById('starMessage').textContent=messages[i%messages.length]};sky.appendChild(b)}
+document.getElementById('openGift').onclick=()=>{document.getElementById('giftBox').classList.add('open');document.getElementById('letter').classList.add('show');document.getElementById('openGift').textContent='A little reminder, just for you ♡';document.getElementById('letter').scrollIntoView({behavior:'smooth',block:'nearest'})};
+function toast(t){let el=document.getElementById('toast');el.textContent=t;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),2200)}3
+document.getElementById('addPhotos').onclick=()=>document.getElementById('photoInput').click();
+document.getElementById('photoInput').addEventListener('change',e=>{let files=[...e.target.files];let grid=document.getElementById('scrapbookGrid');files.forEach((file,i)=>{if(!file.type.startsWith('image/'))return;let url=URL.createObjectURL(file);let card=document.createElement('div');card.className='photo';card.style.setProperty('--rot',((i%3)-1)+'deg');let img=document.createElement('img');img.src=url;img.alt='A scrapbook memory';let cap=document.createElement('div');cap.className='caption';cap.textContent='A little memory ♡';card.append(img,cap);grid.append(card)});if(files.length)toast('Your memories have been added ♡');e.target.value=''});
+document.getElementById('menuBtn').onclick=()=>document.getElementById('navlinks').classList.toggle('show');
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('show')));
+</script>
+</body></html>
